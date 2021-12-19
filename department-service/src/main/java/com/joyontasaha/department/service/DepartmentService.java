@@ -15,6 +15,6 @@ public class DepartmentService {
     }
 
     public Department findDepartmentById(Long departmentId) {
-        return departmentRepository.findById(departmentId).get();
+        return departmentRepository.findById(departmentId).orElse(null);
     }
 }

@@ -1,5 +1,6 @@
 package com.joyontasaha.user.controller;
 
+import com.joyontasaha.user.ValueObject.ResponseTemplateVO;
 import com.joyontasaha.user.entity.User;
 import com.joyontasaha.user.service.UserService;
 import lombok.extern.slf4j.Slf4j;
@@ -19,9 +20,15 @@ public class UserController {
         return userService.saveUser(user);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/getUser/{id}")
     public User getUser(@PathVariable("id") Long userId) {
         log.info("Inside getUser of UserController");
         return userService.findUserById(userId);
+    }
+
+    @GetMapping("/getUserWithDepartment/{id}")
+    public ResponseTemplateVO getUserWithDepartment(@PathVariable("id") Long userId) {
+        log.info("Inside getUserWithDepartment of UserController");
+        return userService.getUserWithDepartment(userId);
     }
 }
