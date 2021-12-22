@@ -1,11 +1,9 @@
 package com.joyontasaha.cloudapigateway;
 
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/fallBack")
 public class FallBackMethodController {
 
     @GetMapping("/userServiceFallBack")

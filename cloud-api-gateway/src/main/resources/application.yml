@@ -1,5 +1,5 @@
 server:
-  port: 9091
+  port: 9191
 
 spring:
   application:
@@ -15,7 +15,7 @@ spring:
             - name: CircuitBreaker
               args:
                 name: USER-SERVICE
-                fallbackUri: forward:/fallback/userServiceFallBack
+                fallbackuri: forward:/userServiceFallBack
         - id: DEPARTMENT-SERVICE
           uri: lb://DEPARTMENT-SERVICE
           predicates:
@@ -24,7 +24,8 @@ spring:
             - name: CircuitBreaker
               args:
                 name: DEPARTMENT-SERVICE
-                fallbackUri: forward:/fallback/departmentServiceFallBack
+                fallbackuri: forward:/departmentServiceFallBack
+
 
 hystrix:
   command:
@@ -32,7 +33,8 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 40000
+            timeoutInMilliseconds: 4000
+
 
 management:
   endpoints:
