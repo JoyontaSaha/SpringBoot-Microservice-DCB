@@ -4,7 +4,6 @@ import com.joyontasaha.user.ValueObject.Department;
 import com.joyontasaha.user.ValueObject.ResponseTemplateVO;
 import com.joyontasaha.user.entity.User;
 import com.joyontasaha.user.repository.UserRepository;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;

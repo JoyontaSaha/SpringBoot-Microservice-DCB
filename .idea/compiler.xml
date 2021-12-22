@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="user-service" />
+        <module name="cloud-config-server" />
         <module name="cloud-api-gateway" />
         <module name="department-service" />
         <module name="service-registry" />
